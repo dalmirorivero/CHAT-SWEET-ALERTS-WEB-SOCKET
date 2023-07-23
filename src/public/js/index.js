@@ -1,23 +1,24 @@
 const socket = io();
 
-Swal.fire({
-    title: 'Saludos',
-    text: 'Mensaje inicial',
-    icon: 'success'
-});
+// Swal.fire({
+//     title: 'Saludos',
+//     text: 'Mensaje inicial',
+//     icon: 'success'
+// });
 
 let user;
 const chatbox = document.getElementById('chatBox');
 
 Swal.fire({
-    title: 'Log In',
+    title: 'Welcome retro chater! 👾 ',
     input: 'text',
-    text: 'Enter your name',
+    inputPlaceholder: "Enter you name...",
     inputValidator: (value)=>{
         return !(value) && "Field required"
     },
     allowOutsideClick: false,
-    allowEscapeKey: false
+    allowEscapeKey: false,
+    toast: true
 }).then (res =>{
     user= res.value;
     socket.emit('auth', user);
@@ -32,11 +33,19 @@ chatbox.addEventListener( 'keyup', event => {
     }
 });
 
+const button = document.getElementById('send');
+button.addEventListener('click', () => {
+    if (chatbox.value.trim().length > 0) {
+        socket.emit('message', { user, message: chatbox.value });
+        chatbox.value = '';
+    }
+});
+
 socket.on('messageLogs', data => {
     let log = document.getElementById ('messageLogs');
     let messages = '';
     data.forEach (message => {
-        messages +=  `${message.user} says: ${message.message}<br/>`
+        messages +=  `👾 ${message.user} : ${message.message}<br/>`
     });
     log.innerHTML = messages;
 });
@@ -51,3 +60,4 @@ socket.on('newUserConnected', data => {
         icon: 'success'
     });
 });
+

@@ -1,16 +1,32 @@
-<div>
-    <h1>
-        Bancan chat?
-    </h1>
-</div>
-<div>
-    <input id="chatBox">
-</div>
-<div>
-    <p id="messageLogs">
 
-    </p>
+<div class="chat-container">
+    <div class="title">
+        <h1>
+            <span id="text-animation"></span>
+        </h1>
+    </div>
+    <div class="message-logs" id="messageLogs"></div>
+    <div class="chat-input">
+        <input id="chatBox" placeholder="Type your message here..." class="styled-input">
+        <button type="submit" id="send"><i class="fa fa-paper-plane-o"></i></button>
+    </div>
 </div>
+
+<script>
+    const textElement = document.getElementById('text-animation');
+const text = "Retro chat v.1.0";
+let index = 0;
+
+function typeWriter() {
+  if (index < text.length) {
+    textElement.textContent += text.charAt(index);
+    index++;
+    setTimeout(typeWriter, 100); // Adjust typing speed (milliseconds)
+  }
+}
+
+typeWriter();
+</script>
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="/socket.io/socket.io.js"></script>
