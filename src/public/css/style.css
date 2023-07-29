@@ -1,8 +1,5 @@
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'VT323', monospace;;
+    font-family: 'VT323', monospace;
 }
 
 body {
@@ -13,25 +10,29 @@ body {
     margin: 0;
     padding: 0;
     background-image: url("../img/TV.jpg");
-    background-position: 50% 70%;
-    /* background-size: cover; */
+    background-position: 50% 50%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-color: #e5e5e5;
     background-attachment:fixed;
 }
 
+.row .chat-row{
+    margin-left: 0.3%;
+    margin-right: 4.5%;
+    overflow: hidden;
+}
+
 .chat-container {
-    width: 400px;
-    /* border: 1px solid #ccc; */
     padding: 20px;
     padding-top: 0px;
+    height: 35vh;
 }
 
 .message-logs {
-    height: 220px;
+    height: 66%;
     overflow-y: scroll;
     margin-bottom: 10px;
-    /* border: 1px solid #ccc; */
     padding: 10px;
     scrollbar-width: thin;
     scrollbar-color: #16FF00 #379237  ;
@@ -57,7 +58,6 @@ body {
   }
 
 .user-message {
-    /* background-color: #f2f2f2; */
     padding: 5px;
     margin-bottom: 5px;
 }
@@ -66,7 +66,6 @@ body {
     display: flex;
     border: 1px dotted #16FF00;
     border-radius: 5px ;
-    
 }
 
 .chat-input input {
@@ -92,7 +91,7 @@ body {
 h1{
     text-align: center;
     padding: 5px;
-    color: #16FF00;
+    color: #16FF00 !important;
     opacity: 50%;
 }
 
@@ -145,60 +144,73 @@ h1{
     text-align: center !important;
     -webkit-box-shadow: 0 0 10px 5px #2d2f2a !important;
     box-shadow: 0 0 10px 5px #2d2f2a !important;
+    border-radius: 30px;
 }
 
 #swal2-input::placeholder{
     color: #16FF00;
 }
 
-@media screen and (max-width: 768px){
-    .chat-container {
-        width: 400px;
-        padding: 20px;
-        padding-bottom: 25%;
+nav {
+    position: fixed;
+    top: 5%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+}
+
+nav a {
+    display: inline-block; /* Use inline-block to position items side by side */
+    padding: 10px 20px; /* Add some padding for better spacing */
+    text-decoration: none;
+    color: #2c2e29;
+    font-family: 'Playfair Display', serif;
+    transition: transform 0.3s;
+}
+
+nav a:hover{
+    transform: scale(1.1);
+}
+
+nav p {
+    display: inline-block;
+    margin: 0 10px; /* Add some margin between the navigation items */
+    color: #2c2e29;
+}
+
+@media (min-width: 992px) and (max-width: 1199){
+    .chat-container{
+        width: 95%;
+        margin-left: 2%;
+        height: 32vh
     }
 
-    .swal2-toast-shown .swal2-container.swal2-center {
-        inset: 37% auto auto 50% !important;
-        transform: translate(-50%, -50%);
+    .message-logs{
+        height: 59%;
     }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px){
-    .chat-container {
-        width: 400px;
-        padding: 20px;
-        padding-bottom: 18%;
+@media (min-width:1200px) and (max-width: 1400px){
+    .chat-container{
+        width: 95%;
+        margin-left: 2%;
+        height: 32vh
     }
 
-    .swal2-toast-shown .swal2-container.swal2-center {
-        inset: 37% auto auto 50% !important;
-        transform: translate(-50%, -50%);
-    }
-}
-
-@media screen and (min-width: 1025px) and (max-width: 1366px){
-    .chat-container {
-        width: 400px;
-        padding: 20px;
-        padding-bottom: 12%;
-    }
-
-    .swal2-toast-shown .swal2-container.swal2-center {
-        inset: 41% auto auto 50% !important;
-        transform: translate(-50%, -50%);
+    .message-logs{
+        height: 59%;
     }
 }
 
-@media screen and (min-width: 1367px) and (max-width: 1440px){
-    .chat-container {
-        width: 400px;
-        padding: 20px;
-        padding-bottom: 11%;
+@media (min-width: 1401px){
+    .chat-container{
+        width: 95%;
+        margin-left: 2%;
+        height: 33vh
     }
 
-    .swal2-toast-shown .swal2-container.swal2-center {
-        inset: 40% auto auto 50% !important;
-        transform: translate(-50%, -50%);
+    .message-logs{
+        height: 60%;
     }
 }

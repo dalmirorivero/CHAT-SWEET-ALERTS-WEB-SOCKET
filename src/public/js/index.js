@@ -9,20 +9,20 @@ const socket = io();
 let user;
 const chatbox = document.getElementById('chatBox');
 
-Swal.fire({
-    title: 'Welcome retro chater! 👾 ',
-    input: 'text',
-    inputPlaceholder: "Enter you name...",
-    inputValidator: (value)=>{
-        return !(value) && "Field required"
-    },
-    allowOutsideClick: false,
-    allowEscapeKey: false,
-    toast: true
-}).then (res =>{
-    user= res.value;
-    socket.emit('auth', user);
-});
+// Swal.fire({
+//     title: 'Welcome retro chater! 👾 ',
+//     input: 'text',
+//     inputPlaceholder: "Enter you name...",
+//     inputValidator: (value)=>{
+//         return !(value) && "Field required"
+//     },
+//     allowOutsideClick: false,
+//     allowEscapeKey: false,
+//     toast: true
+// }).then (res =>{
+//     user= res.value;
+//     socket.emit('auth', user);
+// });
 
 chatbox.addEventListener( 'keyup', event => {
     if( event.key === 'Enter'){
