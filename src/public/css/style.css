@@ -19,8 +19,6 @@ body {
 
 .row .chat-row{
     margin-left: 0.3%;
-    margin-right: 4.5%;
-    overflow: hidden;
 }
 
 .chat-container {
@@ -93,6 +91,8 @@ h1{
     padding: 5px;
     color: #16FF00 !important;
     opacity: 50%;
+    padding-bottom: 0px;
+    margin-bottom: 0px !important;
 }
 
 #chatbox{
@@ -179,38 +179,96 @@ nav p {
     color: #2c2e29;
 }
 
-@media (min-width: 992px) and (max-width: 1199){
+@media (min-width: 768px) and (max-width: 991px){
+    body{
+        background-size: 180%;
+    }
+
+    h1{
+        font-size: 27px;
+    }
+    
     .chat-container{
-        width: 95%;
-        margin-left: 2%;
-        height: 32vh
+        width: 158%;
+        
+        height: 48vh
     }
 
     .message-logs{
-        height: 59%;
+        height: 65%;
     }
 }
 
-@media (min-width:1200px) and (max-width: 1400px){
+@media (min-width: 992px) and (max-width: 1199px){
+    body{
+        background-size: 120%;
+    }
+
+    h1{
+        font-size: 25px !important;
+    }
+    
     .chat-container{
-        width: 95%;
-        margin-left: 2%;
-        height: 32vh
+        width: 100%;
+        height: 40vh
     }
 
     .message-logs{
-        height: 59%;
+        height: 65%;
+    }
+}
+
+@media (min-width:1200px) and (max-width: 1365px){
+    body{
+        background-size: 110%;
+    }
+
+    h1{
+        font-size: 28px !important;
+    }
+    .chat-container{
+        width: 95%;
+        margin-left: 2%;
+        height: 44vh
+    }
+
+    .message-logs{
+        height: 65%;
+    }
+}
+
+@media (min-width: 1366px) and (max-width: 1400px){
+    body{
+    background-size: 120%;
+    }
+
+    .chat-container{
+        width: 100%;
+        margin-left: 2%;
+        height: 38vh
+    }
+
+    .message-logs{
+        height: 70%;
+    }
+
+    .row .chat-row{
+        margin-left: 0%;
     }
 }
 
 @media (min-width: 1401px){
+    h1{
+        font-size: 30px !important;
+    }
+    
     .chat-container{
-        width: 95%;
-        margin-left: 2%;
-        height: 33vh
+        width: 89%;
+        margin-left: 5%;
+        height: 45vh
     }
 
     .message-logs{
-        height: 60%;
+        height: 66%;
     }
 }
