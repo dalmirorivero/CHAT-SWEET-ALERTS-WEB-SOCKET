@@ -1,16 +1,16 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <div>
-<nav><a href="">about</a><p>|</p><a href="">contact</a></nav>
+            <div class="col-12">
+<nav><a href="/about">about</a><p>|</p><a href="/contact">contact</a></nav>
 </div>
 </div>
 <div class="row chat-row">
-    <div class="container col-4 offset-lg-4 offset-xl-4 offset-xxl-4 offset-md-3">
+    <div class="container col-4 offset-3">
 <div class="chat-container">
     <div class="title">
         <h1>
-            <span id="text-animation"></span>
+            Retro chat v.1.0
         </h1>
     </div>
     <div class="message-logs" id="messageLogs"></div>
@@ -24,21 +24,6 @@
 </div>
 </div>
 
-<script>
-    const textElement = document.getElementById('text-animation');
-const text = "Retro chat v.1.0";
-let index = 0;
-
-function typeWriter() {
-  if (index < text.length) {
-    textElement.textContent += text.charAt(index);
-    index++;
-    setTimeout(typeWriter, 100); // Adjust typing speed (milliseconds)
-  }
-}
-
-typeWriter();
-</script>
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="/socket.io/socket.io.js"></script>

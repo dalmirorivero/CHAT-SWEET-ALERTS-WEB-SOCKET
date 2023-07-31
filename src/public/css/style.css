@@ -21,7 +21,8 @@ body {
     margin-left: 0.3%;
 }
 
-.chat-container {
+.chat-container,
+.about-container {
     padding: 20px;
     padding-top: 0px;
     height: 35vh;
@@ -160,7 +161,7 @@ nav {
     font-size: 22px;
 }
 
-nav a {
+nav>a {
     display: inline-block; /* Use inline-block to position items side by side */
     padding: 10px 20px; /* Add some padding for better spacing */
     text-decoration: none;
@@ -169,7 +170,7 @@ nav a {
     transition: transform 0.3s;
 }
 
-nav a:hover{
+nav>a:hover{
     transform: scale(1.1);
 }
 
@@ -179,96 +180,279 @@ nav p {
     color: #2c2e29;
 }
 
+p{
+    text-align: center;
+    color: #16FF00;
+    opacity: 50%;
+    margin-bottom: 1% !important;
+}
+
+p>a{
+    text-decoration: none;
+    font-size: 50px;
+}
+
+.contact{
+    display: flex;
+    padding: 25px;
+    align-items: center;
+    justify-content: center;
+    height: 24vh;
+}
+
+
 @media (min-width: 768px) and (max-width: 991px){
     body{
-        background-size: 180%;
-    }
-
-    h1{
-        font-size: 27px;
-    }
-    
-    .chat-container{
-        width: 158%;
-        
-        height: 48vh
-    }
-
-    .message-logs{
-        height: 65%;
-    }
-}
-
-@media (min-width: 992px) and (max-width: 1199px){
-    body{
-        background-size: 120%;
-    }
-
-    h1{
-        font-size: 25px !important;
-    }
-    
-    .chat-container{
-        width: 100%;
-        height: 40vh
-    }
-
-    .message-logs{
-        height: 65%;
-    }
-}
-
-@media (min-width:1200px) and (max-width: 1365px){
-    body{
-        background-size: 110%;
+        background-size: 220%;
     }
 
     h1{
         font-size: 28px !important;
     }
+    
     .chat-container{
-        width: 95%;
-        margin-left: 2%;
-        height: 44vh
+        width: 158%;
+        height: 34vh
     }
 
     .message-logs{
-        height: 65%;
+        height: 22vh;
+    }
+
+    .about-container{
+        width: 140%;
+        height: 35vh;
+    }
+    .about{
+        margin-left: 27.5% !important;
+    }
+
+    p{
+        margin-bottom: 0 !important;
+    }
+
+    .contact-container{
+        width: 135%;
+        height: 36vh;
+        margin-left: 11% !important;
+    }
+
+    .swal2-container.swal2-center.swal2-backdrop-show .swal2-popup{
+        height: 33vh !important;
+        width: 46vw !important;
     }
 }
 
-@media (min-width: 1366px) and (max-width: 1400px){
+@media (min-width: 992px) and (max-width: 1199px){
     body{
-    background-size: 120%;
+        background-size: 175%;
     }
 
-    .chat-container{
-        width: 100%;
-        margin-left: 2%;
-        height: 38vh
-    }
-
-    .message-logs{
-        height: 70%;
-    }
-
-    .row .chat-row{
-        margin-left: 0%;
-    }
-}
-
-@media (min-width: 1401px){
     h1{
         font-size: 30px !important;
     }
     
     .chat-container{
-        width: 89%;
-        margin-left: 5%;
-        height: 45vh
+        width: 140%;
+        height: 36vh
     }
 
     .message-logs{
-        height: 66%;
+        height: 24vh;
+    }
+
+    .row .chat-row{
+        margin-left: 2.5%;
+    }
+    .about-container{
+        width: 140%;
+        height: 35vh;
+    }
+    .about{
+        margin-left: 27% !important;
+    }
+
+    p{
+        margin-bottom: 0 !important;
+    }
+
+    .contact-container{
+        width: 135%;
+        height: 36.5vh;
+        margin-left: 11% !important;
+    }
+
+    .swal2-container.swal2-center.swal2-backdrop-show .swal2-popup{
+        height: 35vh !important;
+        width: 45vw !important;
     }
 }
+
+@media (min-width:1200px) and (max-width: 1365px){
+    body{
+        background-size: 150%;
+    }
+
+    h1{
+        font-size: 32px !important;
+    }
+    .chat-container{
+        width: 120%;
+        height: 37.5vh;
+        margin-left: 17%;
+    }
+
+    .message-logs{
+        height: 25.5vh;
+    }
+
+    .about-container{
+        width: 135%;
+        height: 34vh;
+    }
+
+    .about{
+        margin-left: 28% !important;
+    }
+
+    p{
+        margin-bottom: 0 !important;
+    }
+
+    .contact-container{
+        width: 135%;
+        height: 37vh;
+        margin-left: 10% !important;
+    }
+
+    .swal2-container.swal2-center.swal2-backdrop-show .swal2-popup{
+        height: 36.5vh !important;
+        
+    }
+}
+
+@media (min-width: 1366px) and (max-width: 1399px){
+    body{
+    background-size: 135%;
+    }
+
+    .chat-container{
+        width: 125%;
+        margin-left: 14.5%;
+        height: 20%;
+    }
+
+    .message-logs{
+        height: 26vh;
+    }  
+
+    .about-container{
+        width: 135%;
+        height: 35vh;
+    }
+    .about{
+        margin-left: 28% !important;
+    }
+
+    p{
+        margin-bottom: 0 !important;
+    }
+
+    .contact-container{
+        width: 135%;
+        height: 37.5vh;
+        margin-left: 10% !important;
+    }
+
+    .swal2-container.swal2-center.swal2-backdrop-show .swal2-popup{
+        height: 35vh !important;
+        }
+
+    .swal2-toast-shown .swal2-container{
+        width: 32vw !important;
+    }
+}
+
+
+@media (min-width: 1400px) and (max-width: 1919px){
+    body{
+        background-size: 112%;
+        background-color: #e5e5e5;
+    }       
+
+    .chat-container{
+        width: 94%;
+        margin-left: 29%;
+        height: 35vh
+    }
+
+    .message-logs{
+        height: 21.5vh;
+    }
+
+    .about-container{
+        width: 100%;
+        height: 33vh;
+    }
+    .about{
+        margin-left: 33.5% !important;
+    }
+
+    p{
+        margin-top: -1% !important;
+        margin-bottom: 0 !important;
+    }
+
+    .contact-container{
+        width: 135%;
+        height: 38vh;
+        margin-left: 10% !important;
+    }
+
+    .swal2-container.swal2-center.swal2-backdrop-show .swal2-popup{
+        height: 32vh !important;
+        }
+
+    .swal2-toast-shown .swal2-container{
+        width: 27.5vw !important;
+    }
+}
+
+@media (min-width: 1920px){
+    body{
+        background-size: 100%;
+    }
+
+    .chat-container{
+        width: 110%;
+        margin-left: 21.5%;
+        height: 37vh
+    }
+
+    .message-logs{
+        height: 25vh;
+    }
+
+    .about-container{
+        width: 135%;
+        height: 37vh;
+    }
+    .about{
+        margin-left: 28% !important;
+    }   
+
+    .contact-container{
+        width: 135%;
+        height: 37.5vh;
+        margin-left: 10% !important;
+    }
+
+    .swal2-container.swal2-center.swal2-backdrop-show .swal2-popup{
+        height: 34vh !important;
+        }
+
+    .swal2-toast-shown .swal2-container{
+        width: 24vw !important;
+    }
+}
+    

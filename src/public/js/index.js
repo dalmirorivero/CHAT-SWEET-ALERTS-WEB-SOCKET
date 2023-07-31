@@ -9,20 +9,20 @@ const socket = io();
 let user;
 const chatbox = document.getElementById('chatBox');
 
-// Swal.fire({
-//     title: 'Welcome retro chater! 👾 ',
-//     input: 'text',
-//     inputPlaceholder: "Enter you name...",
-//     inputValidator: (value)=>{
-//         return !(value) && "Field required"
-//     },
-//     allowOutsideClick: false,
-//     allowEscapeKey: false,
-//     toast: true
-// }).then (res =>{
-//     user= res.value;
-//     socket.emit('auth', user);
-// });
+Swal.fire({
+    title: 'Welcome retro chater! 👾 ',
+    input: 'text',
+    inputPlaceholder: "Enter you name...",
+    inputValidator: (value)=>{
+        return !(value) && "Field required"
+    },
+    allowOutsideClick: false,
+    allowEscapeKey: false,
+    toast: true
+}).then (res =>{
+    user= res.value;
+    socket.emit('auth', user);
+});
 
 chatbox.addEventListener( 'keyup', event => {
     if( event.key === 'Enter'){
@@ -50,14 +50,14 @@ socket.on('messageLogs', data => {
     log.innerHTML = messages;
 });
 
-socket.on('newUserConnected', data => {
-    Swal.fire({
-        toast: true,
-        position: 'top-end',
-        showConfirmationButton: false,
-        timer: 3000,
-        title: `${data} joins the chat`,
-        icon: 'success'
-    });
-});
+// socket.on('newUserConnected', data => {
+//     Swal.fire({
+//         toast: true,
+//         position: 'top-end',
+//         showConfirmationButton: false,
+//         timer: 3000,
+//         title: `${data} joins the chat`,
+//         icon: 'success'
+//     });
+// });
 
